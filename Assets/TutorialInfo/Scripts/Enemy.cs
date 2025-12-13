@@ -11,12 +11,15 @@ public class Enemy : MonoBehaviour
     public int arrowDamage;
     public GameObject prize;
     public Transform prizePoint;
+   
 
 
     private void Start()
     {
         endGameText.gameObject.SetActive(false);
+        
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
