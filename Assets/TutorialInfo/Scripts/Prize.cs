@@ -17,7 +17,7 @@ public class Prize : MonoBehaviour
 
     private void Update()
     {
-        contador.text = contador.ToString();
+      
         contador.text = inventory.coins.ToString();
 
     }
