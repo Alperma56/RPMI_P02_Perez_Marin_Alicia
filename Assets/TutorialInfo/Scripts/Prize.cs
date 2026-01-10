@@ -17,9 +17,7 @@ public class Prize : MonoBehaviour
 
     private void Update()
     {
-      
         contador.text = inventory.coins.ToString();
-
     }
 
     private void OnMouseDown()
@@ -27,7 +25,6 @@ public class Prize : MonoBehaviour
         gameObject.SetActive(false);
         inventory.coins += 1;
         print(inventory.coins);
-        
-       
+    
     }
 }

@@ -14,9 +14,16 @@ public class AdventurerSpawn : MonoBehaviour
 
     private void OnMouseDown()
     {
-       
-        Debug.Log("spawn");
-        Instantiate(adventurer, spawnPoint.position, spawnPoint.rotation);
+        if (inventory.coins <= 10)
+        {
+            Debug.Log("spawn");
+            Instantiate(adventurer, spawnPoint.position, spawnPoint.rotation);
+            inventory.coins += 1;
+        }
 
+        if (inventory.coins > 10)
+        {
+            print("No tienes suficientes monedas");
+        }
     }
 }
