@@ -11,13 +11,15 @@ public class Enemy : MonoBehaviour
     public int arrowDamage;
     public GameObject prize;
     public Transform prizePoint;
+    public Animator animator;
    
 
 
     private void Start()
     {
+        endGameText = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
         endGameText.gameObject.SetActive(false);
-        
+
     }
 
 
@@ -41,7 +43,8 @@ public class Enemy : MonoBehaviour
 
         if (enemyLife <= 0)
         {
-            Destroy(gameObject);
+            animator.SetBool("dead" , true);
+            //Destroy(gameObject);
             Instantiate(prize, prizePoint.position, prizePoint.rotation);
         }
     }

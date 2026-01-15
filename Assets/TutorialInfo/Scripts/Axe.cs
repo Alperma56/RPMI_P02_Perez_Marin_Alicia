@@ -12,6 +12,7 @@ public class Axe : MonoBehaviour
     {
         //busca y guarda en la variable asignada. Tipo que quiero buscar, qué quiero buscar y el componente
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        hachas = GameObject.Find("Contador_hachas").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()
@@ -23,8 +24,9 @@ public class Axe : MonoBehaviour
     private void OnMouseDown()
     {
         gameObject.SetActive(false);
-        inventory.axes += 1;
-        print(inventory.axes);
+        inventory.AddAxes(1);
+        //inventory.axes += 1;
+       // print(inventory.axes);
 
     }
 }

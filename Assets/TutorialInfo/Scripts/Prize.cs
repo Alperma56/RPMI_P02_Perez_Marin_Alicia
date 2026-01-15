@@ -13,18 +13,13 @@ public class Prize : MonoBehaviour
     {
         //busca y guarda en la variable asignada. Tipo que quiero buscar, qué quiero buscar y el componente
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        contador = GameObject.Find("Contador_monedas").GetComponent<TextMeshProUGUI>();
     }
 
-    private void Update()
-    {
-        contador.text = inventory.coins.ToString();
-    }
-
+  
     private void OnMouseDown()
     {
         gameObject.SetActive(false);
-        inventory.coins += 1;
-        print(inventory.coins);
-    
+        inventory.AddCoins(5);
     }
 }

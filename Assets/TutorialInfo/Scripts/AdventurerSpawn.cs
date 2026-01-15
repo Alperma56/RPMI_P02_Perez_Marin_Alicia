@@ -10,18 +10,19 @@ public class AdventurerSpawn : MonoBehaviour
     {
         //busca y guarda en la variable asignada. Tipo que quiero buscar, qué quiero buscar y el componente
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        
     }
 
     private void OnMouseDown()
     {
-        if (inventory.coins <= 10)
+        if (inventory.coins >= 10)
         {
             Debug.Log("spawn");
             Instantiate(adventurer, spawnPoint.position, spawnPoint.rotation);
-            inventory.coins += 1;
+            inventory.AddCoins(-10);
         }
 
-        if (inventory.coins > 10)
+        if (inventory.coins < 10)
         {
             print("No tienes suficientes monedas");
         }
