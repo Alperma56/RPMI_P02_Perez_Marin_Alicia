@@ -17,7 +17,7 @@ public class Axe : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(2*Time.deltaTime, 0, 0);
+        //transform.Rotate(2*Time.deltaTime, 0, 0);
         hachas.text = inventory.axes.ToString();
     }
 

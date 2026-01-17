@@ -7,6 +7,7 @@ public class FinalObject : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
        {
             Destroy(gameObject);
+            print("choque");
        }
     }
 }

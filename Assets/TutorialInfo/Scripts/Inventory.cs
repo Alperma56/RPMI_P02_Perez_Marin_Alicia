@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         contador.text = coins.ToString();
+        hachas.text = hachas.ToString();
     }
     public void AddCoins(int coinsToAdd) 
     {

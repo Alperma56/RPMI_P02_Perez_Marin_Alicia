@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Runtime.CompilerServices;
 using UnityEngine.UIElements;
 
 public class Adventurer : MonoBehaviour
@@ -7,6 +8,7 @@ public class Adventurer : MonoBehaviour
     public int enemyDamage;
     public GameObject arrow;
     public Transform spawnPoint;
+    public Animator animator;
 
     private void Start()
     {
@@ -30,7 +32,8 @@ public class Adventurer : MonoBehaviour
 
              if (adventurerLife <= 0)
              {
-                Destroy(gameObject);
+                animator.SetBool("dead", true);
+                //Destroy(gameObject);
              }
 
         }

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -44,8 +45,15 @@ public class Enemy : MonoBehaviour
         if (enemyLife <= 0)
         {
             animator.SetBool("dead" , true);
+            Invoke("Destruir", 4);
             //Destroy(gameObject);
             Instantiate(prize, prizePoint.position, prizePoint.rotation);
         }
+
+    }
+
+    public void Destruir() 
+    {
+        Destroy(gameObject);
     }
 }
