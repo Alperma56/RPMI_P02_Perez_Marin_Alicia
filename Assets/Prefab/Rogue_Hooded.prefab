@@ -41,19 +41,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.636681
+      value: 7.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79065394
+      value: -0.79065466
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.78
+      value: -2.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.08882667
+      value: -0.03557281
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99604714
+      value: 0.99936706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalRotation.z
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 190.192
+      value: 184.077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -82,6 +82,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       propertyPath: m_Name
       value: Rogue_Hooded
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
+      propertyPath: m_TagString
+      value: Adventurer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -102,6 +106,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1698991425278715588}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8212221794761776109}
   m_SourcePrefab: {fileID: 100100000, guid: aa722b941d8f8474aa3529d9fe93461e, type: 3}
 --- !u!4 &2684218858399871798 stripped
 Transform:
@@ -129,6 +136,7 @@ MonoBehaviour:
   enemyDamage: 100
   arrow: {fileID: 5274198978875148521, guid: 796740f4cb93a324f944f381812f03a0, type: 3}
   spawnPoint: {fileID: 8959808914777378244}
+  animator: {fileID: 1698991425278715588}
 --- !u!65 &-8068488786462194521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,8 +156,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7387707, y: 2.026319, z: 1}
-  m_Center: {x: -0.023427425, y: 1.1355679, z: 1.6202781e-10}
+  m_Size: {x: 1.7387707, y: 2.026319, z: 1.1417162}
+  m_Center: {x: -0.023427429, y: 1.1355679, z: 0.07085783}
 --- !u!54 &521771366764908782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -199,3 +207,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &8212221794761776109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3317906594999855500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7365338, y: 2.3319583, z: 7.957956}
+  m_Center: {x: -0.0026818896, y: 1.2403128, z: 4.8351846}

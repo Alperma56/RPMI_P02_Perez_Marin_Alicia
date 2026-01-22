@@ -13,9 +13,18 @@ public class Adventurer : MonoBehaviour
     private void Start()
     {
         adventurerLife = 100;
-        InvokeRepeating("InstantiateArrow", 2, 2);
+       // InvokeRepeating("InstantiateArrow", 2, 2);
        
     }
+
+    private void OnTriggerEnter(UnityEngine.Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            InvokeRepeating("InstantiateArrow", 2, 2);
+        }
+    }
+
 
     private void InstantiateArrow() 
     {
@@ -32,13 +41,19 @@ public class Adventurer : MonoBehaviour
 
              if (adventurerLife <= 0)
              {
-                animator.SetBool("dead", true);
-                //Destroy(gameObject);
+
+                animator.SetBool("Dead", true);
+                Invoke("DestruirAventurero", 3);
+                CancelInvoke("InstantiateArrow");
              }
 
         }
     }
 
-
+    public void DestruirAventurero()
+    {
+        Destroy(gameObject);
+        
+    }
 
 }

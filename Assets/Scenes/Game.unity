@@ -423,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.57
+      value: -17.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -496,7 +496,7 @@ MonoBehaviour:
   enemy: {fileID: 356547182001623464, guid: 1a2f72f189764584292e8f8c8ab0aafb, type: 3}
   spawnPoint: {fileID: 898763560}
   spawnStart: 2
-  spawnRepeate: 6
+  spawnRepeate: 10
 --- !u!65 &271183419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   enemy: {fileID: 8053742082286673434, guid: ccc169da231e47b42befc4736b9a44ab, type: 3}
   spawnPoint: {fileID: 1798537756}
   spawnStart: 3
-  spawnRepeate: 0
+  spawnRepeate: 10
 --- !u!65 &317256001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1446,7 +1446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246137234464670880, guid: ccc169da231e47b42befc4736b9a44ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.63
+      value: -16.93
       objectReference: {fileID: 0}
     - target: {fileID: 7246137234464670880, guid: ccc169da231e47b42befc4736b9a44ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1652,7 +1652,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.46
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1660,7 +1660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.85
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c64bfad2eb8055f4bb380c1ee8ed384e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2643,6 +2643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342c1976993d3fc48ad141407733145a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinalObject
+  endGameText: {fileID: 914041538}
 --- !u!1001 &1267620634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3828,7 +3829,7 @@ MonoBehaviour:
   enemy: {fileID: 8053742082286673434, guid: ccc169da231e47b42befc4736b9a44ab, type: 3}
   spawnPoint: {fileID: 1779762165}
   spawnStart: 1
-  spawnRepeate: 7
+  spawnRepeate: 10
 --- !u!65 &2038369050
 BoxCollider:
   m_ObjectHideFlags: 0

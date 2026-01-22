@@ -239,6 +239,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6471071740361829872}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5433821794052810511}
   m_SourcePrefab: {fileID: 100100000, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
 --- !u!1 &356547182001623464 stripped
 GameObject:
@@ -308,9 +311,32 @@ MonoBehaviour:
   enemySpeed: 3
   endGameText: {fileID: 0}
   enemyLife: 100
-  arrowDamage: 25
+  arrowDamage: 50
   prize: {fileID: 886839607367816939, guid: 242221d7a957ce4489e02aeb53a45c13, type: 3}
   prizePoint: {fileID: 7080265714559557474}
+  animator: {fileID: 5433821794052810511}
+--- !u!95 &5433821794052810511
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356547182001623464}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8eaed31f67a92b43878481239412849, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1133048284960508690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
