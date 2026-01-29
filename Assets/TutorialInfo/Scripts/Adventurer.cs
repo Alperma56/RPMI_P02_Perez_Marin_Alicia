@@ -9,21 +9,58 @@ public class Adventurer : MonoBehaviour
     public GameObject arrow;
     public Transform spawnPoint;
     public Animator animator;
+    private bool shooting;
+    private float distance;
 
     private void Start()
     {
         adventurerLife = 100;
        // InvokeRepeating("InstantiateArrow", 2, 2);
+       shooting = false;
+        distance = GetComponent<BoxCollider>().size.z;
        
+    }
+
+    private void Update()
+    {
+        if (shooting) // if (shooting ==true)
+        {
+            if (!Physics.Raycast(spawnPoint.position, transform.forward,float.MaxValue, LayerMask.GetMask("Enemies"))) //raycast no choca con nada
+            {
+                shooting = false;
+                CancelInvoke("InstantiateArrow");
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(spawnPoint.position, 0.2f);
+        Gizmos.DrawRay(spawnPoint.position, transform.forward);
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            InvokeRepeating("InstantiateArrow", 2, 2);
+            if (shooting == false) 
+            {
+               shooting=true;
+               InvokeRepeating("InstantiateArrow", 2, 2);
+            }
+           
         }
     }
+
+    //private void OnTriggerExit(UnityEngine.Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+
+    //        CancelInvoke;
+    //    }
+    //}
 
 
     private void InstantiateArrow() 

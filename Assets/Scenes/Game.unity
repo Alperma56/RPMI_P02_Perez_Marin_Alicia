@@ -2662,7 +2662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.95
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2695,6 +2695,14 @@ PrefabInstance:
     - target: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_Name
       value: Rogue_Hooded (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
