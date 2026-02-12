@@ -3,19 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    private int enemies;
+    public int enemies;
 
-    public void CountEnemies(/*int enemiesToAdd*/)
-    {
-        //enemies = GameObject.Find("Enemy").GetComponent<Enemy>();
-        enemies += 1;
-    }
+    //public void CountEnemies()
+    //{
+        
+    //}
 
     private void Update()
     {
         if (enemies <= 3)
-        {
-            SceneManager.LoadScene("Menu");
-        }
+      {
+           SceneManager.LoadScene("Menu");
+      }
     }
 }

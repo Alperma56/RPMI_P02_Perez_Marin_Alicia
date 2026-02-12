@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.76
+      value: 13.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.93
+      value: -15.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -325,10 +325,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemySpeed: 1
   enemyLife: 100
-  arrowDamage: 10
+  arrowDamage: 50
   prize: {fileID: 886839607367816939, guid: 242221d7a957ce4489e02aeb53a45c13, type: 3}
   prizePoint: {fileID: 2434042663579031606}
   animator: {fileID: 8902878756286176273}
+  adventurerDamage: 0
 --- !u!95 &8902878756286176273
 Animator:
   serializedVersion: 7
@@ -382,5 +383,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.270341, z: 1.6985931}
-  m_Center: {x: 0, y: 1.1234303, z: 1.2904472}
+  m_Size: {x: 1, y: 2.270341, z: 0.5447569}
+  m_Center: {x: 0, y: 1.1234303, z: 0.7135291}

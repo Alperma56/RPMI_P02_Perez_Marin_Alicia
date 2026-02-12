@@ -1983,7 +1983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7396575186569282839, guid: 534c0a15da6023c438e8a6955ac9b02a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.75
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 7396575186569282839, guid: 534c0a15da6023c438e8a6955ac9b02a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2495,7 +2495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.75
+      value: -6.6
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2528,18 +2528,6 @@ PrefabInstance:
     - target: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_Name
       value: Rogue_Hooded (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7272827624483834303, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
-      propertyPath: enemyDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2760,14 +2748,6 @@ PrefabInstance:
     - target: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_Name
       value: Rogue_Hooded (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8959808914777378244, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3068,6 +3048,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.64683, y: 1.35807, z: -3.30897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1421166737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1421166739}
+  - component: {fileID: 1421166738}
+  m_Layer: 0
+  m_Name: ReadKey
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1421166738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421166737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce3a27c4373d4649a2d6ae2bddd1c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReadKey
+--- !u!4 &1421166739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421166737}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 388.23587, y: 542.69446, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4332,3 +4356,4 @@ SceneRoots:
   - {fileID: 1690398097}
   - {fileID: 1049696324}
   - {fileID: 1370101993}
+  - {fileID: 1421166739}

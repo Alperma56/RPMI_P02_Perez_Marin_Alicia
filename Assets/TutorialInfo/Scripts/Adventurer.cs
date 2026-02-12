@@ -10,48 +10,68 @@ public class Adventurer : MonoBehaviour
     public Transform spawnPoint;
     public Animator animator;
     private bool shooting;
-    private float distance;
+    public float distance;
 
     private void Start()
     {
         adventurerLife = 100;
        // InvokeRepeating("InstantiateArrow", 2, 2);
-       shooting = false;
-        distance = GetComponent<BoxCollider>().size.z;
-       
+        shooting = false;
+        //distance = GetComponent<BoxCollider>().size.z;
     }
 
     private void Update()
     {
+        bool enemyInFront = Physics.Raycast(spawnPoint.position, transform.forward, distance, LayerMask.GetMask("Enemies"));
+
+        if (adventurerLife <= 0)
+        {
+            animator.SetBool("Dead", true);
+            Invoke("DestruirAventurero", 3);
+            CancelInvoke("InstantiateArrow");
+        }
         if (shooting) // if (shooting ==true)
         {
-            if (!Physics.Raycast(spawnPoint.position, transform.forward,float.MaxValue, LayerMask.GetMask("Enemies"))) //raycast no choca con nada
+            if (!enemyInFront) 
             {
                 shooting = false;
                 CancelInvoke("InstantiateArrow");
             }
         }
+
+        if (!shooting)
+        {
+            shooting = true;
+            InvokeRepeating("InstantiateArrow", 2, 2);
+        }
+
+
+        //if (!Physics.Raycast(spawnPoint.position, transform.forward,float.MaxValue, LayerMask.GetMask("Enemies"))) //raycast no choca con nada
+        //{
+        //    shooting = false;
+        //    CancelInvoke("InstantiateArrow");
+        //}
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(spawnPoint.position, 0.2f);
-        Gizmos.DrawRay(spawnPoint.position, transform.forward);
+        Gizmos.DrawRay(spawnPoint.position, distance*transform.forward);
     }
 
-    private void OnTriggerEnter(UnityEngine.Collider other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            if (shooting == false) 
-            {
-               shooting=true;
-               InvokeRepeating("InstantiateArrow", 2, 2);
-            }
+    //private void OnTriggerEnter(UnityEngine.Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+    //        if (shooting == false) // if (!shooting)
+    //        {
+    //           shooting=true;
+    //           InvokeRepeating("InstantiateArrow", 2, 2);
+    //        }
            
-        }
-    }
+    //    }
+    //}
 
     //private void OnTriggerExit(UnityEngine.Collider other)
     //{
@@ -74,16 +94,6 @@ public class Adventurer : MonoBehaviour
 
         {
             adventurerLife = adventurerLife - enemyDamage;
-        
-
-             if (adventurerLife <= 0)
-             {
-
-                animator.SetBool("Dead", true);
-                Invoke("DestruirAventurero", 3);
-                CancelInvoke("InstantiateArrow");
-             }
-
         }
     }
 

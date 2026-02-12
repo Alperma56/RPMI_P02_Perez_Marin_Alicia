@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         movement = false;
-        adventurerDamage = GetComponent<Adventurer>().adventurerLife; //nullReference
+       
     }
 
     private void OnTriggerEnter(UnityEngine.Collider other)
@@ -28,7 +28,8 @@ public class Enemy : MonoBehaviour
             movement = false;
             //Invoke("Matar", 3);
             animator.SetBool("kill", true);
-            adventurerDamage = -100;
+            // adventurerDamage = -100;
+            other.GetComponent<Adventurer>().adventurerLife = 0;
             Invoke("Matar2", 3);
             //animator.SetBool("kill", false);
             //movement = true;
@@ -83,6 +84,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(prize, prizePoint.position, prizePoint.rotation);
+        GameObject.Find("LevelController").GetComponent<LevelController>().enemies += 1;
     }
 
     //private void Matar()
@@ -95,6 +97,11 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("kill", false);
         movement = true;
+    }
+
+    public void attack() 
+    {
+    
     }
 
     public void SpawnAnimationEnded() 

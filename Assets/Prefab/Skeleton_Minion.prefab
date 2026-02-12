@@ -242,6 +242,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5433821794052810511}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4957824659468938877}
   m_SourcePrefab: {fileID: 100100000, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
 --- !u!1 &356547182001623464 stripped
 GameObject:
@@ -314,6 +317,7 @@ MonoBehaviour:
   prize: {fileID: 886839607367816939, guid: 242221d7a957ce4489e02aeb53a45c13, type: 3}
   prizePoint: {fileID: 7080265714559557474}
   animator: {fileID: 5433821794052810511}
+  adventurerDamage: 0
 --- !u!95 &5433821794052810511
 Animator:
   serializedVersion: 7
@@ -336,6 +340,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &4957824659468938877
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356547182001623464}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.0068033, z: 0.557971}
+  m_Center: {x: 0, y: 1.0593435, z: 0.8886237}
 --- !u!4 &1133048284960508690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 863f3e0a9368ba2429fbbf05e761b58a, type: 3}
