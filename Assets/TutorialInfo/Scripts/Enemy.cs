@@ -13,11 +13,34 @@ public class Enemy : MonoBehaviour
     public Transform prizePoint;
     public Animator animator;
     private bool movement;
+    public float adventurerDamage;
 
     private void Start()
     {
         movement = false;
+        adventurerDamage = GetComponent<Adventurer>().adventurerLife; //nullReference
     }
+
+    private void OnTriggerEnter(UnityEngine.Collider other)
+    {
+        if (other.gameObject.CompareTag("Adventurer")) 
+        {
+            movement = false;
+            //Invoke("Matar", 3);
+            animator.SetBool("kill", true);
+            adventurerDamage = -100;
+            Invoke("Matar2", 3);
+            //animator.SetBool("kill", false);
+            //movement = true;
+
+            // primero acción y después adventurerlife=0
+        }
+    }
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+        
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -31,7 +54,6 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Adventurer"))
         {
             enemySpeed = 0;
-            
 
         }
 
@@ -61,6 +83,18 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(prize, prizePoint.position, prizePoint.rotation);
+    }
+
+    //private void Matar()
+    //{
+    //    animator.SetBool("kill", true);
+    //    adventurerDamage = -100;
+
+    //}
+    private void Matar2() 
+    {
+        animator.SetBool("kill", false);
+        movement = true;
     }
 
     public void SpawnAnimationEnded() 

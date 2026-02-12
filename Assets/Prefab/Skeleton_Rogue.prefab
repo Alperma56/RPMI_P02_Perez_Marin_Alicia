@@ -45,15 +45,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.4
+      value: 12.76
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.64
+      value: -0.7906518
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.22
+      value: -16.93
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -249,6 +249,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2314606842173506128}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 576219349347460500}
   m_SourcePrefab: {fileID: 100100000, guid: 1e0cb76c29e3a30418f300084dd468dd, type: 3}
 --- !u!4 &7246137234464670880 stripped
 Transform:
@@ -321,9 +324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemySpeed: 1
-  endGameText: {fileID: 0}
   enemyLife: 100
-  arrowDamage: 50
+  arrowDamage: 10
   prize: {fileID: 886839607367816939, guid: 242221d7a957ce4489e02aeb53a45c13, type: 3}
   prizePoint: {fileID: 2434042663579031606}
   animator: {fileID: 8902878756286176273}
@@ -361,3 +363,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccbdf624ede4ba4283d9440a0617b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndDestroy
+--- !u!65 &576219349347460500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053742082286673434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.270341, z: 1.6985931}
+  m_Center: {x: 0, y: 1.1234303, z: 1.2904472}
