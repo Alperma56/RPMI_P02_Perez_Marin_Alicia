@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     private bool movement;
     public float adventurerDamage;
+    private Adventurer adventurer; //contador, tenemos que leer qué aventurero está matando
 
     private void Start()
     {
@@ -34,14 +35,9 @@ public class Enemy : MonoBehaviour
             //animator.SetBool("kill", false);
             //movement = true;
 
-            // primero acción y después adventurerlife=0
         }
     }
 
-    //private void OnCollisionExit(Collision collision)
-    //{
-        
-    //}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -87,19 +83,14 @@ public class Enemy : MonoBehaviour
         GameObject.Find("LevelController").GetComponent<LevelController>().enemies += 1;
     }
 
-    //private void Matar()
-    //{
-    //    animator.SetBool("kill", true);
-    //    adventurerDamage = -100;
-
-    //}
+    
     private void Matar2() 
     {
         animator.SetBool("kill", false);
         movement = true;
     }
 
-    public void attack() 
+    public void Attack() 
     {
     
     }
