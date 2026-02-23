@@ -14,11 +14,15 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     private bool movement;
     public float adventurerDamage;
-    private Adventurer adventurer; //contador, tenemos que leer qué aventurero está matando
+    private Adventurer adventurerToAttack; //contador, tenemos que leer qué aventurero está matando
+    private int enemiesCounter;
+    public TextMeshProUGUI counter;
+
 
     private void Start()
     {
         movement = false;
+        enemiesCounter = 0;
        
     }
 
@@ -48,11 +52,11 @@ public class Enemy : MonoBehaviour
 
         }
 
-        if (collision.gameObject.CompareTag("Adventurer"))
-        {
-            enemySpeed = 0;
+        //if (collision.gameObject.CompareTag("Adventurer"))
+        //{
+        //    enemySpeed = 0;
 
-        }
+        //}
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -65,6 +69,12 @@ public class Enemy : MonoBehaviour
             enemySpeed = 0;
             animator.SetBool("dead", true);
             Invoke("Destruir", 3);
+            enemiesCounter = enemiesCounter + 1;
+            print(enemiesCounter);
+            counter.text = enemiesCounter.ToString();//hacer referencia ya que es un prefab
+
+            //counter = GameObject.Find("enemiesCounter").GetComponent<TextMeshProUGUI>();
+            // GameObject.Find("LevelController").GetComponent<LevelController>().enemies = enemiesCounter;
 
         }
     }
@@ -72,6 +82,17 @@ public class Enemy : MonoBehaviour
     {
         if (movement == true)
         {
+            RaycastHit hitInfo;
+
+            if (Physics.Raycast(transform.position, transform.forward, out hitInfo, 0.5f, LayerMask.GetMask("Heroes")))
+            {
+                if (hitInfo.collider!=null) 
+                { 
+                    adventurerToAttack=hitInfo.collider.GetComponent<Adventurer>();
+                }
+                movement = false;
+            }
+            
             transform.Translate(0, 0, enemySpeed * Time.deltaTime, Space.World);
         }
     }
@@ -80,7 +101,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(prize, prizePoint.position, prizePoint.rotation);
-        GameObject.Find("LevelController").GetComponent<LevelController>().enemies += 1;
+        //GameObject.Find("LevelController").GetComponent<LevelController>().enemies = enemiesCounter;
     }
 
     

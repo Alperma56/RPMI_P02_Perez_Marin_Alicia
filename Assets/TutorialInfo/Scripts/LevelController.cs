@@ -5,11 +5,7 @@ public class LevelController : MonoBehaviour
 {
     public int enemies;
 
-    //public void CountEnemies()
-    //{
-        
-    //}
-
+  
     private void Update()
     {
         if (enemies <= 3)
