@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    public int enemies;
+    public int totalEnemies;
 
   
     private void Update()
     {
-        if (enemies <= 3)
+        if (totalEnemies <= 3)
       {
            SceneManager.LoadScene("Menu");
       }

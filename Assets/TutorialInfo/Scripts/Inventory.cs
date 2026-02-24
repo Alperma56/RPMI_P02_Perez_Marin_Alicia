@@ -2,6 +2,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 
 public class Inventory : MonoBehaviour
@@ -10,6 +11,8 @@ public class Inventory : MonoBehaviour
     public TextMeshProUGUI contador;
     public TextMeshProUGUI hachas;
     public int axes;
+    public TextMeshProUGUI countEnemies;
+    public int enemies;
 
     private void Start()
     {
@@ -26,6 +29,12 @@ public class Inventory : MonoBehaviour
     {
         axes += axesToAdd;
         hachas.text = axes.ToString();
+    }
+
+    public void AddEnemies(int enemiesToAdd) 
+    {
+        enemies += enemiesToAdd;
+        countEnemies.text = enemies.ToString();
     }
 
 }

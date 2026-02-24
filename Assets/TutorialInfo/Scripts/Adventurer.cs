@@ -45,12 +45,6 @@ public class Adventurer : MonoBehaviour
             InvokeRepeating("InstantiateArrow", 2, 2);
         }
 
-
-        //if (!Physics.Raycast(spawnPoint.position, transform.forward,float.MaxValue, LayerMask.GetMask("Enemies"))) //raycast no choca con nada
-        //{
-        //    shooting = false;
-        //    CancelInvoke("InstantiateArrow");
-        //}
     }
 
     private void OnDrawGizmos()
@@ -59,29 +53,6 @@ public class Adventurer : MonoBehaviour
         Gizmos.DrawSphere(spawnPoint.position, 0.2f);
         Gizmos.DrawRay(spawnPoint.position, distance*transform.forward);
     }
-
-    //private void OnTriggerEnter(UnityEngine.Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        if (shooting == false) // if (!shooting)
-    //        {
-    //           shooting=true;
-    //           InvokeRepeating("InstantiateArrow", 2, 2);
-    //        }
-           
-    //    }
-    //}
-
-    //private void OnTriggerExit(UnityEngine.Collider other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-
-    //        CancelInvoke;
-    //    }
-    //}
-
 
     private void InstantiateArrow() 
     {

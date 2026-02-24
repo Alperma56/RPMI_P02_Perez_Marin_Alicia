@@ -14,15 +14,16 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     private bool movement;
     public float adventurerDamage;
-    private Adventurer adventurerToAttack; //contador, tenemos que leer qué aventurero está matando
-    private int enemiesCounter;
-    public TextMeshProUGUI counter;
+    private Adventurer adventurerToAttack; 
+    //private int enemiesCounter;
+    //public TextMeshProUGUI counter;
+    private Inventory inventory;
 
 
     private void Start()
     {
         movement = false;
-        enemiesCounter = 0;
+        //enemiesCounter = 0;
        
     }
 
@@ -31,14 +32,10 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Adventurer")) 
         {
             movement = false;
-            //Invoke("Matar", 3);
             animator.SetBool("kill", true);
-            // adventurerDamage = -100;
             other.GetComponent<Adventurer>().adventurerLife = 0;
             Invoke("Matar2", 3);
-            //animator.SetBool("kill", false);
-            //movement = true;
-
+           
         }
     }
 
@@ -48,19 +45,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("EndGame"))
         {
             enemySpeed=0;
-           // endGameText.gameObject.SetActive(true);
-
         }
 
-        //if (collision.gameObject.CompareTag("Adventurer"))
-        //{
-        //    enemySpeed = 0;
-
-        //}
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
-           
             enemyLife = enemyLife - arrowDamage;
         }
 
@@ -69,12 +58,9 @@ public class Enemy : MonoBehaviour
             enemySpeed = 0;
             animator.SetBool("dead", true);
             Invoke("Destruir", 3);
-            enemiesCounter = enemiesCounter + 1;
-            print(enemiesCounter);
-            counter.text = enemiesCounter.ToString();//hacer referencia ya que es un prefab
-
-            //counter = GameObject.Find("enemiesCounter").GetComponent<TextMeshProUGUI>();
-            // GameObject.Find("LevelController").GetComponent<LevelController>().enemies = enemiesCounter;
+            inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+            inventory.AddEnemies(1);
+            GameObject.Find("LevelController").GetComponent<LevelController>().totalEnemies = inventory.enemies;
 
         }
     }
@@ -101,7 +87,6 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(prize, prizePoint.position, prizePoint.rotation);
-        //GameObject.Find("LevelController").GetComponent<LevelController>().enemies = enemiesCounter;
     }
 
     
