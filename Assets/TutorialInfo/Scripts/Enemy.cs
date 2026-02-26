@@ -15,15 +15,13 @@ public class Enemy : MonoBehaviour
     private bool movement;
     public float adventurerDamage;
     private Adventurer adventurerToAttack; 
-    //private int enemiesCounter;
-    //public TextMeshProUGUI counter;
     private Inventory inventory;
 
 
     private void Start()
     {
         movement = false;
-        //enemiesCounter = 0;
+      
        
     }
 
@@ -58,10 +56,6 @@ public class Enemy : MonoBehaviour
             enemySpeed = 0;
             animator.SetBool("dead", true);
             Invoke("Destruir", 3);
-            inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
-            inventory.AddEnemies(1);
-            GameObject.Find("LevelController").GetComponent<LevelController>().totalEnemies = inventory.enemies;
-
         }
     }
     void Update()
@@ -77,6 +71,7 @@ public class Enemy : MonoBehaviour
                     adventurerToAttack=hitInfo.collider.GetComponent<Adventurer>();
                 }
                 movement = false;
+                //animator.SetBool("kill", true);
             }
             
             transform.Translate(0, 0, enemySpeed * Time.deltaTime, Space.World);
@@ -87,6 +82,8 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
         Instantiate(prize, prizePoint.position, prizePoint.rotation);
+        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        inventory.AddEnemies(1);
     }
 
     
@@ -98,11 +95,20 @@ public class Enemy : MonoBehaviour
 
     public void Attack() 
     {
-    
+        //if (adventurerToAttack != null) 
+        //{
+        //adventurerToAttack.enemyDamage -= 0;
+        //}
     }
 
     public void SpawnAnimationEnded() 
     {
         movement = true;
     }
+
+    //public void BackToMenu() 
+    //{
+    //    GameObject.Find("LevelController").GetComponent<LevelController>();
+        
+    //}
 }

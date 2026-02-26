@@ -4,11 +4,18 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
     public int totalEnemies;
+    public Inventory inventory;
 
-  
+    private void Start()
+    {
+        inventory= GameObject.Find("Inventory").GetComponent<Inventory>();
+    }
+    
     private void Update()
     {
-        if (totalEnemies <= 3)
+        totalEnemies = inventory.enemies;
+
+        if (totalEnemies >= 3)
       {
            SceneManager.LoadScene("Menu");
       }

@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     public int axes;
     public TextMeshProUGUI countEnemies;
     public int enemies;
+    public LevelController levelController;
 
     private void Start()
     {
@@ -37,4 +38,10 @@ public class Inventory : MonoBehaviour
         countEnemies.text = enemies.ToString();
     }
 
+    public void BackToMenu()
+    {
+        levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
+        levelController.totalEnemies = enemies;
+
+    }
 }

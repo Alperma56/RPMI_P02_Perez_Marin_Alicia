@@ -39,7 +39,7 @@ public class Adventurer : MonoBehaviour
             }
         }
 
-        if (!shooting)
+        else //if (!shooting)
         {
             shooting = true;
             InvokeRepeating("InstantiateArrow", 2, 2);
