@@ -15,7 +15,7 @@ public class LevelController : MonoBehaviour
     {
         totalEnemies = inventory.enemies;
 
-        if (totalEnemies >= 3)
+        if (totalEnemies >= 5)
       {
            SceneManager.LoadScene("Menu");
       }

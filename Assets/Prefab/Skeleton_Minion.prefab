@@ -311,10 +311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7194c31930f7a5240928757463571e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  enemySpeed: 3
+  enemySpeed: 2
   enemyLife: 100
   arrowDamage: 100
-  prize: {fileID: 886839607367816939, guid: 242221d7a957ce4489e02aeb53a45c13, type: 3}
+  prize: {fileID: 7921331866712285101, guid: 534c0a15da6023c438e8a6955ac9b02a, type: 3}
   prizePoint: {fileID: 7080265714559557474}
   animator: {fileID: 5433821794052810511}
   adventurerDamage: 0
