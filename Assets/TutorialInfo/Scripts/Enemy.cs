@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public float adventurerDamage;
     private Adventurer adventurerToAttack; 
     private Inventory inventory;
+    public GameObject deadParticle;
 
 
     private void Start()
@@ -55,6 +56,7 @@ public class Enemy : MonoBehaviour
         {
             enemySpeed = 0;
             animator.SetBool("dead", true);
+            deadParticle.gameObject.SetActive(true);
             Invoke("Destruir", 3);
         }
     }
