@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 956fa83aa3909b04b92c2f60c0f33d68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 956fa83aa3909b04b92c2f60c0f33d68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventurerSpawn
   adventurer: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+  specialAdventurer: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
   spawnPoint: {fileID: 94875461}
 --- !u!65 &196863746
 BoxCollider:
@@ -7139,6 +7140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventurerSpawn
   adventurer: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+  specialAdventurer: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
   spawnPoint: {fileID: 202435198}
 --- !u!65 &559757421
 BoxCollider:
@@ -8592,6 +8594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventurerSpawn
   adventurer: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+  specialAdventurer: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
   spawnPoint: {fileID: 1613911318}
 --- !u!65 &963533291
 BoxCollider:
@@ -9056,7 +9059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79065466
+      value: -0.8406547
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9314,6 +9317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventurerSpawn
   adventurer: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+  specialAdventurer: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
   spawnPoint: {fileID: 1374757928}
 --- !u!65 &1151110850
 BoxCollider:
@@ -19053,7 +19057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79065466
+      value: -0.8406547
       objectReference: {fileID: 0}
     - target: {fileID: 2684218858399871798, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19803,7 +19807,7 @@ MonoBehaviour:
   coins: 10
   contador: {fileID: 426795639}
   hachas: {fileID: 277519793}
-  axes: 0
+  axes: 10
   countEnemies: {fileID: 752608916}
   enemies: 0
   levelController: {fileID: 1706228581}
@@ -20462,6 +20466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdventurerSpawn
   adventurer: {fileID: 3317906594999855500, guid: 1e2145620ebeca140ad7b2e48804ebbd, type: 3}
+  specialAdventurer: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
   spawnPoint: {fileID: 82342081}
 --- !u!65 &1650869311
 BoxCollider:
@@ -32037,6 +32042,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aabcfa736c955f41bef8823fc5a80b0, type: 3}
+--- !u!1001 &562243520067772671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3701906490574623601, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_Name
+      value: Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 29.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9024744
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.027969625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99960876
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 183.205
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040855841159088587, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 75286d4cbd9162343a64834dc078aef5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -32127,3 +32189,4 @@ SceneRoots:
   - {fileID: 1293013436}
   - {fileID: 1822516409}
   - {fileID: 243544723}
+  - {fileID: 562243520067772671}
