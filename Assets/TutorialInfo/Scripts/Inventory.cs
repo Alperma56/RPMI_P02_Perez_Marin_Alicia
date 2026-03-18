@@ -13,12 +13,15 @@ public class Inventory : MonoBehaviour
     public int axes;
     public TextMeshProUGUI countEnemies;
     public int enemies;
+    public int pocion;
+    public TextMeshProUGUI countPocion;
     public LevelController levelController;
 
     private void Start()
     {
         contador.text = coins.ToString();
         hachas.text = hachas.ToString();
+        countPocion.text = countEnemies.ToString();
     }
     public void AddCoins(int coinsToAdd) 
     {
@@ -36,6 +39,12 @@ public class Inventory : MonoBehaviour
     {
         enemies += enemiesToAdd;
         countEnemies.text = enemies.ToString();
+    }
+
+    public void AddPocion(int pocionToAdd)
+    {
+        pocion += pocionToAdd;
+        countPocion.text = pocion.ToString();
     }
 
     public void BackToMenu()

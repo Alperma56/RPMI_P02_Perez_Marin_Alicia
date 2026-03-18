@@ -3,6 +3,7 @@ using UnityEngine;
 public class AdventurerSpawn : MonoBehaviour
 {
     public GameObject adventurer;
+    public GameObject specialAdventurer;
     public Transform spawnPoint;
     private Inventory inventory;
 
@@ -15,7 +16,13 @@ public class AdventurerSpawn : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (inventory.coins >= 10)
+        if (inventory.axes >= 10) 
+        {
+            Instantiate(specialAdventurer, spawnPoint.position, spawnPoint.rotation);
+            inventory.AddAxes(-10);
+        }
+        
+        else if (inventory.coins >= 10)
         {
             Debug.Log("spawn");
             Instantiate(adventurer, spawnPoint.position, spawnPoint.rotation);
@@ -25,6 +32,11 @@ public class AdventurerSpawn : MonoBehaviour
         if (inventory.coins < 10)
         {
             print("No tienes suficientes monedas");
+        }
+
+        if (inventory.axes < 10)
+        {
+            print("No tienes suficientes hachas");
         }
     }
 }

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FinalObject : MonoBehaviour
@@ -20,6 +21,13 @@ public class FinalObject : MonoBehaviour
             Destroy(gameObject);
             print("choque");
             endGameText.gameObject.SetActive(true);
+            SceneManager.LoadScene("Menu");
+            // Invoke("LoadScene", 2);
         }
+    }
+
+    public void LoadScene() 
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
