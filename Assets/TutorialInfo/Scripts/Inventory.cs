@@ -21,7 +21,8 @@ public class Inventory : MonoBehaviour
     {
         contador.text = coins.ToString();
         hachas.text = hachas.ToString();
-        countPocion.text = countEnemies.ToString();
+        pocion = 5;
+        //countPocion.text = countEnemies.ToString();
     }
     public void AddCoins(int coinsToAdd) 
     {
@@ -41,11 +42,11 @@ public class Inventory : MonoBehaviour
         countEnemies.text = enemies.ToString();
     }
 
-    public void AddPocion(int pocionToAdd)
-    {
-        pocion += pocionToAdd;
-        countPocion.text = pocion.ToString();
-    }
+    //public void AddPocion(int pocionToAdd)
+    //{
+    //    pocion += pocionToAdd;
+    //    countPocion.text = pocion.ToString();
+    //}
 
     public void BackToMenu()
     {

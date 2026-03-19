@@ -8,9 +8,12 @@ public class WarriorSpawn : MonoBehaviour
     {
         button = false;
     }
-    private void OnMouseDown()
+
+    public void Guerrero()
     {
-        button = true;
-        print("axe");
+        button=true;
+        print("hola");
     }
+
+  
 }

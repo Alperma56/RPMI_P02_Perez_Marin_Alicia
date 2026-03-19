@@ -11,6 +11,7 @@ public class Adventurer : MonoBehaviour
     public Animator animator;
     private bool shooting;
     public float distance;
+    public Inventory inventory;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class Adventurer : MonoBehaviour
        // InvokeRepeating("InstantiateArrow", 2, 2);
         shooting = false;
         //distance = GetComponent<BoxCollider>().size.z;
+        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
 
     private void Update()
@@ -72,6 +74,13 @@ public class Adventurer : MonoBehaviour
     {
         Destroy(gameObject);
         
+    }
+
+    private void OnMouseDown()
+    {
+        print("pocion");
+        inventory.pocion -= 1;
+        adventurerLife = adventurerLife + 50;
     }
 
 }
