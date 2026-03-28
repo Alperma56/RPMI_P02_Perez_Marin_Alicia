@@ -178,7 +178,7 @@ MonoBehaviour:
   arrow: {fileID: 5274198978875148521, guid: 796740f4cb93a324f944f381812f03a0, type: 3}
   spawnPoint: {fileID: 2228446064709021093}
   animator: {fileID: 2961700488263144150}
-  distance: 6
+  distance: 20
   inventory: {fileID: 0}
 --- !u!95 &2961700488263144150
 Animator:

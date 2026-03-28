@@ -5152,7 +5152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemySpeed: 2
   enemyLife: 100
-  arrowDamage: 100
+  arrowDamage: 50
   prize: {fileID: 7921331866712285101, guid: 534c0a15da6023c438e8a6955ac9b02a, type: 3}
   prizePoint: {fileID: 7080265714559557474}
   animator: {fileID: 5433821794052810511}

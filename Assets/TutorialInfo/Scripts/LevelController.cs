@@ -15,7 +15,7 @@ public class LevelController : MonoBehaviour
     {
         totalEnemies = inventory.enemies;
 
-        if (totalEnemies >= 5)
+        if (totalEnemies >= 10) //Cuando mate a 10 enemigos volverá al menú de inicio, como si ganara el juego
       {
            SceneManager.LoadScene("Menu");
       }
