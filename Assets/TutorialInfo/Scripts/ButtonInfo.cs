@@ -28,9 +28,13 @@ public class ButtonInfo : MonoBehaviour
             Time.timeScale = 0.0f;
         }
 
+        //no lee el input
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
-            informationImage.enabled = false;
+            print("1");
+            informationImage.enabled=false;
+            print("2");
+
         }
     }
 

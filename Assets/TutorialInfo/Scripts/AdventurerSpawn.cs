@@ -9,6 +9,7 @@ public class AdventurerSpawn : MonoBehaviour
     private Inventory inventory;
     private WarriorSpawn spawnWarrior;
     private MageSpawn mageSpawn;
+    private AdventurerButton adventurerSpawn;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class AdventurerSpawn : MonoBehaviour
         inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
         spawnWarrior = GameObject.Find("WarriorSpawn").GetComponent<WarriorSpawn>();
         mageSpawn = GameObject.Find("MageSpawn").GetComponent<MageSpawn>();
+        //adventurerSpawn = GameObject.Find("AdventurerButton").GetComponent<AdventurerButton>();
     }
 
     private void OnMouseDown()
@@ -27,7 +29,11 @@ public class AdventurerSpawn : MonoBehaviour
             inventory.AddAxes(-10);
         }
 
-       
+       //if (adventurerSpawn.buttonA == true) 
+       // {
+       //     Instantiate(adventurer, spawnPoint.position, spawnPoint.rotation);
+       //     inventory.AddCoins(-10);
+       // }
         if (spawnWarrior.button == false)
         {
             if (mageSpawn.buttonM == true && inventory.coins >= 15)
@@ -42,6 +48,7 @@ public class AdventurerSpawn : MonoBehaviour
                 inventory.AddCoins(-10);
             }
         }
+
         if (inventory.coins < 10)
         {
             print("No tienes suficientes monedas");
